@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Shopping Kart</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+      <div class="row">        
+        <div class="col">
+          <h3 class="brand-text float-left">Shopping Kart</h3>
+          <button
+            type="button"
+            class="btn btn-primary float-right"
+            data-toggle="modal"
+            data-target="#cart"
+          >
+            Cart (<span class="total-count"></span>)</button
+          ><button class="clear-cart btn btn-danger float-right">Clear Cart</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container"></div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="cart"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table"></table>
+            <div>Total price: $<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Order now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>  
+</html>
